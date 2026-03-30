@@ -34,7 +34,7 @@
 
 ```bash
 git clone <repo-url>
-cd context-ai-assistant
+cd <repo_name>
 ```
 
 ### 2. Установите зависимости
