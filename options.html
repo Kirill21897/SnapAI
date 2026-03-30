@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Context AI Assistant — Настройки</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 480px;
+      margin: 40px auto;
+      padding: 0 20px;
+      color: #202124;
+    }
+    h1 {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+    label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 6px;
+      color: #5f6368;
+    }
+    .field {
+      margin-bottom: 16px;
+    }
+    select,
+    input[type="password"],
+    input[type="text"] {
+      width: 100%;
+      padding: 8px 12px;
+      font-size: 14px;
+      border: 1px solid #dadce0;
+      border-radius: 4px;
+      box-sizing: border-box;
+      outline: none;
+    }
+    select:focus,
+    input[type="password"]:focus,
+    input[type="text"]:focus {
+      border-color: #1a73e8;
+    }
+    .actions {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    button {
+      padding: 8px 20px;
+      font-size: 14px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    #save-btn {
+      background: #1a73e8;
+      color: #fff;
+    }
+    #save-btn:hover {
+      background: #1557b0;
+    }
+    #clear-btn {
+      background: #f1f3f4;
+      color: #202124;
+    }
+    #clear-btn:hover {
+      background: #e8eaed;
+    }
+    #status {
+      margin-top: 12px;
+      font-size: 13px;
+      min-height: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Настройки</h1>
+  <div class="field">
+    <label for="provider">Провайдер AI</label>
+    <select id="provider">
+      <option value="openai">OpenAI</option>
+      <option value="openrouter">OpenRouter</option>
+    </select>
+  </div>
+  <div class="field">
+    <label for="api-key">API-ключ AI-сервиса</label>
+    <input type="password" id="api-key" placeholder="sk-..." autocomplete="off" />
+  </div>
+  <div class="field">
+    <label for="model">Модель</label>
+    <input type="text" id="model" placeholder="gpt-4o-mini" autocomplete="off" />
+  </div>
+  <div class="actions">
+    <button id="save-btn">Сохранить</button>
+    <button id="clear-btn">Очистить</button>
+  </div>
+  <p id="status"></p>
+  <script src="dist/options.js"></script>
+</body>
+</html>

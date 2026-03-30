@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Context AI Assistant",
+  "version": "0.1.0",
+  "description": "AI assistant for selected text on any web page",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "clipboardWrite"
+  ],
+  "background": {
+    "service_worker": "dist/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["dist/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_page": "options.html",
+  "action": {
+    "default_title": "Context AI Assistant"
+  }
+}
